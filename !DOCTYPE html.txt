@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_new.css">
+    <title>Chatbot</title>
+</head>
+<body>
+    <div id="chatIcon" class="chat-icon">
+        <img src="chatbot-icon.png" alt="Chatbot Icon">
+    </div>
+
+    <div id="chatBox" class="chatbox">
+        <div id="chatTitle" class="chat-title">Chatbot</div>
+        <div id="closeChat" class="close-chat">X</div>
+        <div id="chatDisplay" class="chat-display"></div>
+        <div id="options">
+            <label for="optionsSelect">Choose an option:</label>
+            <select id="optionsSelect" name="options">
+                <option value="option1">Info about course</option>
+                <option value="option2">Feedback</option>
+                <option value="option3">Login Issue</option>
+                <option value="option4">Exam Schedule</option>
+                <option value="option5">Assignments</option>
+                <option value="option6">Other Query</option>
+            </select>
+            <div id="subOptions" class="options-container">
+    <label for="subOptionsSelect">Choose a sub-option:</label>
+    <select id="subOptionsSelect" name="subOptions">
+        <!-- Sub-options will be dynamically added here based on user selection -->
+    </select>
+</div>
+    <script src="chat_bot.js"></script>
+</body>
+</html>

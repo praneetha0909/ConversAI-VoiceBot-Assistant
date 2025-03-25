@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles_new.css">
+    <title>Chatbot🤖</title>
+</head>
+<body>
+  
+    <div id="chat-icon" class="chat-icon">
+        <img src="chatbot-icon.png" alt="Chat Icon">
+    </div>
+
+    <div id="chatbox">
+        <div id="chat-title" class="chat-title">Chatbot🤖</div>
+        <div id="closeChat" class="close-chat">X</div>
+        <div id="chat-display"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="sendButton">Send</button>
+        <img id="voiceButton" src="microphone-icon.png" alt="Microphone">
+        <div id="loading-indicator">Loading...</div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="bot.js"></script>
+</body>
+</html>

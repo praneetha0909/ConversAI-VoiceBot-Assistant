@@ -1,0 +1,994 @@
+/* Group 8
+Sri Samrajya Vybhav Mallappa � 1002072400
+Sai Santoshi Praneetha Mukkamala � 1002112894
+Likhitha Murakonda � 1002034763
+Bhavishya Orra � 1002072365
+Kaushal Rameshbhai Patel � 1002117239
+*/
+/* Reset some default browser styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set the font family for the entire page */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    /* Background color for the body */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for content containers */
+.content-part {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.content-part-home {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Website title styles */
+.website-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.hamburger-menu {
+    display: none;
+    /* Initially hidden */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Header button styles */
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #87ceeb;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #4682b4;
+}
+
+/* Sign-up button style */
+.btn-signup {
+    background-color: #28a745;
+    /* Green button background color */
+}
+
+/* Page title styles */
+h1 {
+    font-size: 24px;
+    /* Font size for page titles */
+    text-align: center;
+    /* Center-align page titles */
+    margin-bottom: 20px;
+    /* Add spacing between titles and content */
+}
+
+/* Form styles */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.group-button button {
+    flex-grow: 1;
+    margin: 0 5px;
+}
+
+/* Form input and select styles */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="date"],
+select,
+button[type="submit"] {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.box {
+
+    padding: 10px;
+    width: 45%;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #007bff;
+    /* Link text color */
+}
+
+/* Footer styles */
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Footer container styles */
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer title styles */
+.footer-left p {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Footer middle styles */
+.footer-middle {
+    display: flex;
+    /* Display the lists side by side */
+    align-items: center;
+    /* Align items vertically in the center */
+}
+
+/* Footer link styles */
+.footer-middle a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 20px;
+    /* Increase the padding for better spacing */
+}
+
+/* Adjust margin for the last link to remove the extra spacing */
+.footer-middle a:last-child {
+    margin-right: 0;
+}
+
+.footer-middle li {
+    margin-right: 20px;
+}
+
+/* Newsletter input styles */
+.newsletter input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Newsletter button styles */
+.newsletter button {
+    background-color: #87ceeb;
+    /* Light Sky Blue button background color */
+    color: #fff;
+    /* Button text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Social media link styles */
+.social-media a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+    /* Header styles for smaller screens */
+    .header-buttons {
+        display: none;
+        /* Hide header buttons by default */
+    }
+
+    .header-buttons.open {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        /* Adjust as needed */
+        right: 0;
+        background-color: #007bff;
+    }
+
+    .content-part-home {
+        padding: 10px;
+    }
+
+    .website-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .header-buttons {
+        margin-top: 10px;
+    }
+
+    .btn {
+        margin-top: 10px;
+    }
+
+    /* Footer styles for smaller screens */
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-middle {
+        margin-top: 20px;
+    }
+
+    .footer-middle li {
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+.btn {
+    margin: 5px;
+    /* Add some margin around the buttons */
+}
+
+/* Add space between the header and buttons */
+.header-buttons {
+    margin-top: 20px;
+}
+
+/* Add some space between the sections */
+.group-button,
+.menu-table,
+.chat-popup {
+    margin-top: 20px;
+}
+
+/* Center align the buttons in group-button */
+.group-button {
+    text-align: center;
+}
+
+/* Style the form in chat-popup */
+.form-container {
+    text-align: center;
+}
+
+/* Style the chat form elements */
+.form-container textarea,
+.form-container button {
+    margin: 5px;
+}
+
+.edit-btn,
+.delete-btn {
+    margin-left: 10px;
+}
+
+/*Chat Option Styles*/
+chat-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.chat-popup .form-container {
+    max-width: 100%;
+}
+
+.chat-popup h1 {
+    color: orangered;
+    /* Change this to the color you want */
+}
+
+/*Student Page CSS*/
+.inline-block {
+    display: inline-block;
+    margin: 10px;
+}
+
+.section {
+    float: left;
+    margin: 0 1.5%;
+    width: 30%;
+    margin-right: 10px;
+}
+
+.student-details {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.user-details {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-left: 10px;
+    /* Add margin to separate buttons from details */
+}
+
+.course-details {
+    /* max-width: 400px; */
+    margin: 5px;
+    background-color: lightskyblue;
+    padding: 20px;
+    border: 1px solid #ccc;
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+.section-title {
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.section-content {
+    margin-left: 20px;
+}
+
+.container,
+.container1 {
+    display: flex;
+    column-fill: auto;
+}
+
+.box1 {
+    height: 730px;
+    width: 400px;
+    background-color: white;
+    margin-right: 30px;
+}
+
+.box2 {
+    margin-top: 70px;
+    height: 850px;
+    width: 950px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+
+}
+
+.ibox3 {
+    margin-top: 10px;
+    height: 400px;
+    width: 300px;
+}
+
+.box3 {
+
+    height: 300px;
+}
+
+.section1 {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 0px;
+    /* Adjust positioning properties as needed */
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 10px;
+    height: 200px;
+    width: 300px;
+}
+
+.first {
+    margin-top: 0px;
+    margin-right: 10px;
+    height: 300px;
+    width: 400px;
+    background-color: white;
+
+}
+
+.second {
+    margin-top: 0px;
+    margin-right: 10px;
+    height: 300px;
+    width: 200px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.third {
+    margin-top: 0px;
+    margin-left: 10px;
+    height: 300px;
+    width: 400px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.exam-details {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 10px;
+    background-color: lightskyblue;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.form-input-size {
+    display: block;
+    width: 100%;
+    height: 1.5rem;
+    padding: 0.3rem 0.4rem;
+    border-radius: 0.2rem;
+    outline: 0;
+    border-style: none;
+    margin-top: 0.4rem;
+}
+
+/* Buttons for edit/delete in instructor*/
+.edit-btn,
+.delete-btn {
+    margin-left: 10px;
+}
+
+
+/* Existing styles */
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    .header-buttons {
+        display: none;
+    }
+
+    .header-buttons.open {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        z-index: 1;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    /* max-width: 1200px; */
+    padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    /* Change according to your theme */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    /* Darken on hover */
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+    .header-buttons {
+        display: none;
+    }
+
+    .header-buttons.open {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        z-index: 1;
+    }
+
+    .hamburger-menu {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        /* Adjust as per preference */
+        cursor: pointer;
+    }
+}
+
+/* Reset CSS properties for consistency across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.website-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.hamburger-menu {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.group-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.edit-btn,
+.delete-btn {
+    margin-left: 10px;
+}
+
+.chat-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    z-index: 1000;
+}
+
+.popup.error {
+    background-color: #f44336;
+}
+
+.popup.success {
+    background-color: #4CAF50;
+}
+
+.card-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.card {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+}
+
+.card {
+    width: 80%;
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.card-content {
+    padding: 8px;
+}
+/* Add this to your styles_new.css file */
+
+/* Chat icon styles */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+    .chat-icon:hover {
+        background-color: #45a049;
+    }
+
+/* Chat box styles */
+.chatbox {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.chat-title {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    cursor: move;
+}
+
+.close-chat {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #777;
+    transition: color 0.3s;
+}
+
+    .close-chat:hover {
+        color: #333;
+    }
+
+.chat-display {
+    height: 200px;
+    overflow-y: scroll;
+    padding: 15px;
+}
+
+.user-input {
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.send-button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+    .send-button:hover {
+        background-color: #45a049;
+    }
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.user {
+    background-color: #f0f0f0;
+    text-align: right;
+}
+
+.bot {
+    background-color: #e1f7d5;
+}
+
+/* Adjustments for chat icon image */
+.chat-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* Chat icon styles */
+/* Chat icon styles */
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    background-color: transparent; /* Set to transparent */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+
+#chatbox {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+
+#chatbox {
+    border: 1px solid #ccc;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #fff; /* Adjust the background color as needed */
+    z-index: 1000;
+}
+
+#chat-display {
+    height: 200px; /* Adjust the height of the chat display area */
+    overflow-y: auto;
+}
+
+#user-input {
+    width: 70%;
+    padding: 10px;
+}
+
+button {
+    width: 30%;
+    padding: 10px;
+}
+
+#chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px; 
+    height: 100px;
+    background-color: #4CAF50; 
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+}
+#loading-indicator {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+.user-message {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 70%;
+}
+
+.bot-message {
+    background-color: #c1f0c1;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 70%;
+}
+
+#interactive-elements {
+    margin-top: 10px;
+}
+
+#voiceButton {
+    width: 25px; /* Adjust the width as needed */
+    height: 25px; /* Adjust the height as needed */
+    cursor: pointer;
+    margin-left: 10px; /* Add some margin for spacing */
+}
+
+/* Optional: Add a hover effect */
+#voiceButton:hover {
+    filter: brightness(110%);
+}
+
+#voiceButton, #sendButton {
+    vertical-align: middle;
+}
+
