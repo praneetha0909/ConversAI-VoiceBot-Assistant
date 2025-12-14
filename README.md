@@ -27,10 +27,13 @@ ConversAI is a browser-based voice assistant that enables users to interact thro
 ## Setup and Installation
 Clone the repository:
 ```bash
+git clone https://github.com/praneetha0909/ConversAI-VoiceBot-Assistant.git
+cd ConversAI-VoiceBot-Assistant
+
 Add your OpenAI API key inside script.js:
 const OPENAI_API_KEY = 'YOUR_API_KEY_HERE';
-Usage
 
+Usage
 Click the microphone button to begin voice capture
 Speak naturally and wait for transcription
 The assistant generates a real-time response using the LLM
